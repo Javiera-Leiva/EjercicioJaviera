@@ -16,11 +16,11 @@ const PromedioNumeros = () => {
   const [promedio, setPromedio] = useState(0);
 
 //Se define una función AgregarNumero que se ejecuta cuando se envía el formulario.
-  const AgregarNumero = (event) => {
+  var AgregarNumero = (event) => {
     // Esta función evita que el formulario se recargue.
     event.preventDefault();
     //Obtiene el número ingresado y valida realizando un evento que recibe el dato.
-    const numero = Number(event.target.numero.value);
+    var numero = Number(event.target.numero.value);
     //lo agrega al arreglo de números utilizando setNumeros
     setNumeros([...numeros, numero]); 
     // calcula el promedio actualizado utilizando setPromedio.
@@ -38,7 +38,7 @@ const PromedioNumeros = () => {
         <label>Ingrese un número:</label>
         {/* type permite asignar el tipo de dato. */}
         {/* name lo utilizamos para identificar un dato. */}
-        <input type="number" name="numero" required />
+        <input type="decimal" name="numero" required />
         <button type="submit">Agregar</button>
       </form>
       {/*Condicion ternaria  */}
